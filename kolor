@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="R">R</p>
+<p id="G">G</p>
+<p id="B">B</p>
+
+<button type="button" onclick="myFunction()">Kolor</button>
+
+<script>
+function myFunction() {
+    document.getElementById("R").style.backgroundColor = "rgb(100,0,0)";
+    document.getElementById("G").style.backgroundColor = "rgb(0,100,0)";
+    document.getElementById("B").style.backgroundColor = "rgb(0,0,100)";
+}
+
+</script>
+
+</body>
+</html>
