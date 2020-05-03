@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="utf-8">    
+</head>
+<body>
+        <Br>
+    <b>Miernik siy hasła</b> <br> 
+        <b>Hasło</b><Br>
+    <input style="width:170px;" type="text" id="haslo" onkeyup="klik()"><br><br>
+        <b>Siła Hasła</b>
+    <div id="wynik" style="width:170px;height:20px;border: 0.2px solid black;background-color: red;"></div><br>
+    
+</body>
+
+<script>
+    
+    function klik() {
+        
+       const haslo = document.getElementById("haslo").value;
+        
+        var sila = 0;
+        
+        if (haslo.length = 1) {
+            var sila = 0;
+            }
+        
+        if (haslo.match(".*[a-z].*")) {   
+               var sila = sila + 1;   
+            } 
+        
+        if (haslo.match(".*[A-Z].*")) {
+               var sila = sila + 1;   
+            } 
+       
+        if (haslo.match(".*[0-9].*")) {              
+               var sila = sila + 1;                            
+            }
+        
+         if (haslo.length >= 6) {   
+            var sila = sila + 1;
+            }
+        
+        
+         if (sila == 0) {
+                document.getElementById("wynik").style.backgroundColor = "#ff0000"; 
+            }
+        
+        else if (sila == 1) {
+                document.getElementById("wynik").style.backgroundColor = "brown";
+            }
+        
+        else if (sila == 2)   { 
+                document.getElementById("wynik").style.backgroundColor = "#ff9900";
+            }
+        
+        else if (sila == 3) {
+                document.getElementById("wynik").style.backgroundColor = "#ffff00";
+            }
+
+         else if (sila == 4) {
+                document.getElementById("wynik").style.backgroundColor = "#00ff00";
+            }   
+    }
+    
+</script>
+
+</html>
